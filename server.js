@@ -21,6 +21,7 @@ mongoose.connect(dbLink)
 
 app.use(helmet());
 app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
 const sessionOptions = session({
